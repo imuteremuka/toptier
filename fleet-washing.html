@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Washing Services - Top-Tier Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Fleet Washing Specific Styles */
+        .fleet-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/fleet-bg.jpg') center/cover;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+            margin-bottom: 50px;
+        }
+
+        .fleet-intro {
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        .fleet-package {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .fleet-package:hover {
+            transform: translateY(-10px);
+        }
+
+        .package-header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .package-header h3 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .package-header .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .package-header .price span {
+            font-size: 1rem;
+            font-weight: normal;
+            opacity: 0.9;
+        }
+
+        .package-features {
+            padding: 30px;
+        }
+
+        .package-features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px;
+        }
+
+        .package-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .package-features li i {
+            color: #4CAF50;
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: block;
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #4CAF50;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: #4CAF50;
+        }
+
+        .benefits-section {
+            background: #f9f9f9;
+            padding: 60px 20px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto 0;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .contact-banner {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 60px 0;
+        }
+
+        .contact-banner h2 {
+            margin: 0 0 20px;
+            font-size: 2rem;
+        }
+
+        .contact-banner p {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .contact-banner .cta-button {
+            display: inline-block;
+            background: white;
+            color: #4CAF50;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .contact-banner .cta-button:hover {
+            background: transparent;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .fleet-grid {
+                grid-template-columns: 1fr;
+                padding: 0 15px;
+            }
+            
+            .fleet-hero {
+                padding: 80px 20px;
+            }
+            
+            .package-header h3 {
+                font-size: 1.5rem;
+            }
+            
+            .package-header .price {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Top-Tier Solutions</h1>
+                <p>Professional Car Care and Cleaning Experts</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#services" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header">Detailing Services</li>
+                        <li><a href="basic-wash.html">Basic Wash</a></li>
+                        <li><a href="interior-detailing.html">Interior Detailing</a></li>
+                        <li><a href="exterior-detailing.html">Exterior Detailing</a></li>
+                        <li><a href="ceramic-coating.html">Ceramic Coating</a></li>
+                        <li><a href="fleet-washing.html" class="active">Fleet Washing</a></li>
+                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-header">Advanced Services</li>
+                        <li><a href="window-tinting.html">Window Tinting</a></li>
+                        <li><a href="paint-correction.html">Paint Correction</a></li>
+                        <li><a href="protection-aesthetic.html">Protection & Aesthetic</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Maintenance <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="maintenance-services.html#light-maintenance">Light Maintenance</a></li>
+                        <li><a href="maintenance-services.html#tire-services">Tire Services</a></li>
+                        <li><a href="maintenance-services.html#fluid-services">Fluid Services</a></li>
+                        <li><a href="maintenance-services.html">All Maintenance Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="subscription.html">Subscription</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Fleet Hero Section -->
+    <section class="fleet-hero">
+        <div class="container">
+            <h1>Professional Fleet Washing Services</h1>
+            <p>Keep your business vehicles looking their best with our comprehensive fleet washing solutions</p>
+        </div>
+    </section>
+
+    <!-- Fleet Intro -->
+    <section class="fleet-intro">
+        <h2>Custom Fleet Washing Solutions for Your Business</h2>
+        <p>At Top-Tier Solutions, we understand that your fleet is a reflection of your business. Our professional fleet washing services are designed to keep your vehicles clean, well-maintained, and representing your brand in the best possible light. With flexible scheduling and competitive pricing, we make it easy to maintain a professional image for your entire fleet.</p>
+    </section>
+
+    <!-- Fleet Packages -->
+    <section class="fleet-packages">
+        <h2 class="section-title">Fleet Washing Packages</h2>
+        <div class="fleet-grid">
+            <!-- Basic Fleet Wash -->
+            <div class="fleet-package">
+                <div class="package-header">
+                    <h3>Basic Fleet Wash</h3>
+                    <div class="price">R150 <span>per vehicle</span></div>
+                    <p>Ideal for regular maintenance</p>
+                </div>
+                <div class="package-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> High-pressure exterior wash</li>
+                        <li><i class="fas fa-check"></i> Wheel and tire cleaning</li>
+                        <li><i class="fas fa-check"></i> Window cleaning</li>
+                        <li><i class="fas fa-check"></i> Drying with microfiber towels</li>
+                        <li><i class="fas fa-check"></i> Mirror and door jamb cleaning</li>
+                        <li><i class="fas fa-check"></i> License plate cleaning</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Request a Quote</a>
+                </div>
+            </div>
+
+            <!-- Premium Fleet Wash -->
+            <div class="fleet-package">
+                <div class="package-header" style="background: #2E7D32;">
+                    <h3>Premium Fleet Wash</h3>
+                    <div class="price">R250 <span>per vehicle</span></div>
+                    <p>Best value for regular cleaning</p>
+                </div>
+                <div class="package-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Everything in Basic Fleet Wash</li>
+                        <li><i class="fas fa-check"></i> Bug and tar removal</li>
+                        <li><i class="fas fa-check"></i> Tire dressing</li>
+                        <li><i class="fas fa-check"></i> Interior vacuuming</li>
+                        <li><i class="fas fa-check"></i> Dashboard and console wipe down</li>
+                        <li><i class="fas fa-check"></i> Interior window cleaning</li>
+                    </ul>
+                    <a href="#contact" class="cta-button" style="background: #2E7D32; border-color: #2E7D32;">Request a Quote</a>
+                </div>
+            </div>
+
+            <!-- Complete Fleet Detailing -->
+            <div class="fleet-package">
+                <div class="package-header" style="background: #1B5E20;">
+                    <h3>Complete Fleet Detailing</h3>
+                    <div class="price">R450 <span>per vehicle</span></div>
+                    <p>For a showroom finish</p>
+                </div>
+                <div class="package-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Everything in Premium Fleet Wash</li>
+                        <li><i class="fas fa-check"></i> Full interior detailing</li>
+                        <li><i class="fas fa-check"></i> Upholstery and carpet cleaning</li>
+                        <li><i class="fas fa-check"></i> Leather conditioning</li>
+                        <li><i class="fas fa-check"></i> Engine bay cleaning</li>
+                        <li><i class="fas fa-check"></i> Headlight restoration</li>
+                    </ul>
+                    <a href="#contact" class="cta-button" style="background: #1B5E20; border-color: #1B5E20;">Request a Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bulk Discounts -->
+    <section class="contact-banner">
+        <h2>Special Fleet Discounts</h2>
+        <p>We offer competitive discounts for fleets of 5+ vehicles. Contact us today to discuss custom pricing for your business needs. Our team can work around your schedule to minimize downtime and keep your fleet looking its best.</p>
+        <a href="#contact" class="cta-button">Get a Custom Quote</a>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Fleet Services?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Flexible Scheduling</h3>
+                    <p>We work around your business hours to minimize disruption to your operations.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Mobile Service</h3>
+                    <p>Our team comes to you, saving you time and keeping your vehicles where they need to be.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Quality Assurance</h3>
+                    <p>Consistent, high-quality results that maintain your professional image.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-tags"></i>
+                    <h3>Cost-Effective</h3>
+                    <p>Special rates for fleet accounts and volume discounts available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Banner -->
+    <section class="contact-banner" id="contact">
+        <h2>Ready to Schedule Your Fleet Service?</h2>
+        <p>Contact us today to discuss your fleet washing needs and receive a customized quote. Our team is ready to provide the professional service your business deserves.</p>
+        <a href="tel:+27211234567" class="cta-button"><i class="fas fa-phone"></i> Call Now: +27 21 123 4567</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                <p>Saturday: 9:00 AM - 5:00 PM</p>
+                <p>Sunday: 10:00 AM - 3:00 PM</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="subscription.html">Subscription</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +27 21 123 4567</p>
+                <p><i class="fas fa-envelope"></i> hello@top-tier-solutions.co.za</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Car Wash Street, Cape Town</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Top-Tier Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
