@@ -6,6 +6,204 @@
     <title>Top-Tier Solutions - Premium Car Care in Cape Town</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Navigation Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            position: relative;
+            flex-wrap: wrap;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            margin: 0 30px;
+            padding: 0;
+        }
+
+        .nav-links > li {
+            position: relative;
+            margin: 0 12px;
+        }
+
+        .nav-links > li > a {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-links > li > a:hover {
+            color: #4CAF50;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            padding: 10px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown-menu a {
+            padding: 8px 20px;
+            display: block;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            font-size: 14px;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f8f9fa;
+            color: #4CAF50;
+            padding-left: 25px;
+        }
+
+        .dropdown-header {
+            padding: 5px 20px;
+            font-weight: 600;
+            color: #4CAF50;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background: #eee;
+            margin: 8px 0;
+        }
+
+        /* Search Form */
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .search-form {
+            display: flex;
+            align-items: center;
+            background: #f5f5f5;
+            border-radius: 20px;
+            padding: 5px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .search-form:focus-within {
+            background: #fff;
+            box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+        }
+
+        .search-form input {
+            border: none;
+            background: transparent;
+            padding: 5px 10px;
+            outline: none;
+            width: 150px;
+            transition: width 0.3s ease;
+        }
+
+        .search-form input:focus {
+            width: 200px;
+        }
+
+        .search-form button {
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .logo p {
+            margin: 5px 0 0 0;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #4CAF50;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        }
+
+        /* Mobile responsiveness */
+        @media screen and (max-width: 1024px) {
+            .search-form {
+                display: none;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                margin: 0;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links > li {
+                width: 100%;
+                margin: 0;
+                text-align: center;
+            }
+
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                display: none;
+                padding: 0;
+            }
+
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -47,10 +245,16 @@
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <div class="nav-actions">
+                <form class="search-form" action="#" method="get">
+                    <input type="text" placeholder="Search..." name="search">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
             </div>
         </nav>
     </header>
