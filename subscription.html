@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Wash Subscription Plans - Top-Tier Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Subscription specific styles */
+        .subscription-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/subscription-bg.jpg') center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            margin-bottom: 50px;
+        }
+
+        .subscription-plans {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .plan-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .plan-card.popular {
+            border: 2px solid #4CAF50;
+            position: relative;
+        }
+
+        .popular-tag {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: #4CAF50;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .plan-price span {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .plan-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .plan-features li i {
+            color: #4CAF50;
+            margin-right: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #4CAF50;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: #4CAF50;
+        }
+
+        .benefits-section {
+            background: #f9f9f9;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto 0;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Top-Tier Solutions</h1>
+                <p>Professional Car Care and Cleaning Experts</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#services" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header">Detailing Services</li>
+                        <li><a href="basic-wash.html">Basic Wash</a></li>
+                        <li><a href="interior-detailing.html">Interior Detailing</a></li>
+                        <li><a href="exterior-detailing.html">Exterior Detailing</a></li>
+                        <li><a href="ceramic-coating.html">Ceramic Coating</a></li>
+                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-header">Advanced Services</li>
+                        <li><a href="window-tinting.html">Window Tinting</a></li>
+                        <li><a href="paint-correction.html">Paint Correction</a></li>
+                        <li><a href="protection-aesthetic.html">Protection & Aesthetic</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Maintenance <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="maintenance-services.html#light-maintenance">Light Maintenance</a></li>
+                        <li><a href="maintenance-services.html#tire-services">Tire Services</a></li>
+                        <li><a href="maintenance-services.html#fluid-services">Fluid Services</a></li>
+                        <li><a href="maintenance-services.html">All Maintenance Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="subscription.html" class="active">Subscription</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Subscription Hero -->
+    <section class="subscription-hero">
+        <div class="container">
+            <h1>Car Wash Subscription Plans</h1>
+            <p>Save time and money with our convenient subscription plans</p>
+        </div>
+    </section>
+
+    <!-- Subscription Plans -->
+    <section class="subscription-plans">
+        <div class="plan-card">
+            <h3>Basic Plan</h3>
+            <div class="plan-price">R199<span>/month</span></div>
+            <ul class="plan-features">
+                <li><i class="fas fa-check"></i> 2 Basic Washes per month</li>
+                <li><i class="fas fa-check"></i> 10% off additional services</li>
+                <li><i class="fas fa-check"></i> Priority booking</li>
+                <li><i class="fas fa-check"></i> Free vacuum service</li>
+            </ul>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+
+        <div class="plan-card popular">
+            <div class="popular-tag">Most Popular</div>
+            <h3>Premium Plan</h3>
+            <div class="plan-price">R399<span>/month</span></div>
+            <ul class="plan-features">
+                <li><i class="fas fa-check"></i> 4 Premium Washes per month</li>
+                <li><i class="fas fa-check"></i> 15% off additional services</li>
+                <li><i class="fas fa-check"></i> Priority booking</li>
+                <li><i class="fas fa-check"></i> Free vacuum & interior wipe down</li>
+                <li><i class="fas fa-check"></i> Free 300ml drink after 3 washes</li>
+                <li><i class="fas fa-check"></i> 1 Free basic wash after 5 washes</li>
+            </ul>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+
+        <div class="plan-card">
+            <h3>Ultimate Plan</h3>
+            <div class="plan-price">R699<span>/month</span></div>
+            <ul class="plan-features">
+                <li><i class="fas fa-check"></i> Unlimited Basic Washes</li>
+                <li><i class="fas fa-check"></i> 20% off additional services</li>
+                <li><i class="fas fa-check"></i> Priority booking</li>
+                <li><i class="fas fa-check"></i> Free vacuum & interior wipe down</li>
+                <li><i class="fas fa-check"></i> Free 500ml drink every visit</li>
+                <li><i class="fas fa-check"></i> 1 Free premium wash after 4 visits</li>
+                <li><i class="fas fa-check"></i> Free tire shine every visit</li>
+            </ul>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2>Why Choose Our Subscription?</h2>
+            <p>Our subscription plans are designed to save you time and money while keeping your car in top condition.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-coins"></i>
+                    <h3>Save Money</h3>
+                    <p>Get more value with our subscription plans compared to pay-per-wash options.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Save Time</h3>
+                    <p>Skip the line with priority booking and get your car cleaned faster.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-gift"></i>
+                    <h3>Exclusive Rewards</h3>
+                    <p>Enjoy special benefits like free drinks and complimentary washes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                <p>Saturday: 9:00 AM - 5:00 PM</p>
+                <p>Sunday: 10:00 AM - 3:00 PM</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="subscription.html">Subscription</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +27 21 123 4567</p>
+                <p><i class="fas fa-envelope"></i> hello@top-tier-solutions.co.za</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Car Wash Street, Cape Town</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Top-Tier Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
