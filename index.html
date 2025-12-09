@@ -14,14 +14,16 @@
             padding: 15px 5%;
             position: relative;
             flex-wrap: nowrap;
-            gap: 30px;
+            justify-content: flex-start;
         }
 
         .logo {
             display: flex;
             flex-direction: column;
             white-space: nowrap;
-            margin-right: 20px;
+            margin: 0 40px 0 0;
+            padding: 0;
+            align-self: center;
         }
 
         .nav-links {
@@ -29,14 +31,14 @@
             align-items: center;
             flex-wrap: nowrap;
             overflow-x: auto;
-            padding: 5px 0;
+            padding: 0;
             margin: 0;
-            gap: 10px;
+            gap: 5px;
         }
 
         .nav-links > li {
             position: relative;
-            margin: 0 12px;
+            margin: 0 8px;
         }
 
         .nav-links > li > a {
@@ -119,18 +121,119 @@
 
         /* Navigation Actions */
         .nav-actions {
+            margin-left: auto;
             display: flex;
             align-items: center;
+            gap: 20px;
+        }
+
+        /* Search Form Styles */
+        .search-container {
+            position: relative;
+            margin-right: 15px;
+        }
+
+        .search-form {
+            display: flex;
+            align-items: center;
+            background: #f8f9fa;
+            border-radius: 20px;
+            padding: 0 10px;
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+            height: 32px;
             margin-left: auto;
+            overflow: hidden;
+        }
+
+        .search-form:focus-within {
+            box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+            border-color: #4CAF50;
+            width: 220px;
+        }
+
+        .search-form input {
+            border: none;
+            background: transparent;
+            padding: 0 8px;
+            outline: none;
+            width: 0;
+            min-width: 0;
+            transition: width 0.3s ease;
+            font-size: 13px;
+            height: 100%;
+        }
+
+        .search-form.active input {
+            width: 140px;
+            min-width: 120px;
+        }
+
+        .search-form button.search-btn {
+            background: #f8f9fa;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            padding: 0 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 30px;
+            white-space: nowrap;
+            font-size: 12px;
+            font-weight: 500;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .search-form button.search-btn:hover {
+            background: #e9ecef;
+        }
+
+        .search-form button i {
+            font-size: 12px;
+            margin-right: 6px;
+        }
+
+        .search-form input {
+            border: none;
+            background: transparent;
+            padding: 0 12px;
+            outline: none;
+            width: 0;
+            min-width: 0;
+            transition: width 0.3s ease;
+            font-size: 13px;
+            height: 100%;
+        }
+
+        /* Hide search on mobile */
+        @media screen and (max-width: 1024px) {
+            .search-container {
+                display: none;
+            }
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #3498db;  /* Primary brand blue color */
+            font-weight: 700;
+            line-height: 1.2;
+            text-align: left;
+            padding: 0;
+            align-self: flex-start;
         }
 
         .logo p {
             margin: 2px 0 0 0;
-            font-size: 0.9rem;
+            font-size: 0.75rem;  
             font-weight: 500;
             color: #4CAF50;
             letter-spacing: 0.5px;
             white-space: nowrap;
+            line-height: 1.2;
+            text-align: left;
         }
 
         /* Mobile responsiveness */
@@ -216,6 +319,15 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="nav-actions">
+                <div class="search-container">
+                    <form class="search-form" action="#" method="get" onsubmit="return false;">
+                        <input type="text" placeholder="Search services..." name="search" id="searchInput">
+                        <button type="button" id="searchButton" class="search-btn">
+                            <i class="fas fa-search"></i>
+                            <span>Search Top-Tier</span>
+                        </button>
+                    </form>
+                </div>
                 <div class="burger">
                     <div class="line1"></div>
                     <div class="line2"></div>
