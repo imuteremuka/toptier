@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Opening Hours */
+        .opening-hours {
+            display: grid;
+            gap: 5px;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .hours-row {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            gap: 10px;
+        }
+
+        .day {
+            min-width: 110px;
+            text-align: left;
+        }
+
+        .time {
+            font-weight: 500;
+            color: #4CAF50;
+        }
+
         /* Navigation Styles */
         .navbar {
             display: flex;
@@ -561,9 +586,20 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Opening Hours</h3>
-                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                <p>Saturday: 9:00 AM - 4:00 PM</p>
-                <p>Sunday: 10:00 AM - 3:00 PM</p>
+                <div class="opening-hours">
+                    <div class="hours-row">
+                        <span class="day">Monday - Friday</span>
+                        <span class="time">07:00 AM - 10:00 PM</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="day">Saturday</span>
+                        <span class="time">06:30 AM - 10:00 PM</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="day">Sunday</span>
+                        <span class="time">06:30 AM - 10:00 PM</span>
+                    </div>
+                </div>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
