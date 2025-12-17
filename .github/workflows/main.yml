@@ -10,4 +10,6 @@ jobs:
     ubuntu-environment-variables:
        runs-on: ubuntu-latest
        steps:
-        - run : env
+         - name : Print Secrets
+           run :  |
+               echo "MY SECRET": ${{ secrets.IM_SECRET }}
